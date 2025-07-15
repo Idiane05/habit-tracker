@@ -3,32 +3,48 @@
 // require('dotenv').config();
 
 // const app = express();
+// const PORT = process.env.PORT || 5000;
+
+// // Middlewares
 // app.use(cors());
 // app.use(express.json());
 
-// // Simple test route
-// app.get('/api/ping', (req, res) => {
+// // ✅ Routes
+// const userRoutes = require('./routes/users');
+// app.use('/api/users', userRoutes);
+
+// // ✅ Default test route
+// app.get('/', (req, res) => {
 //   res.json({ message: 'Habit Tracker backend is running!' });
 // });
 
-// const PORT = process.env.PORT || 5000;
 // app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
+//   console.log(`✅ Server is running at: http://localhost:${PORT}`);
 // });
-
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+const PORT = process.env.PORT || 5000;
+
+// 🔧 Middlewares
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/ping', (req, res) => {
+// ✅ User routes
+const userRoutes = require('./routes/users');
+app.use('/api/users', userRoutes);
+
+// ✅ Habit routes
+const habitRoutes = require('./routes/habits');
+app.use('/api/habits', habitRoutes);
+
+// 🏁 Default test route
+app.get('/', (req, res) => {
   res.json({ message: 'Habit Tracker backend is running!' });
 });
 
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`✅ Server is running at: http://localhost:${PORT}`);
 });
