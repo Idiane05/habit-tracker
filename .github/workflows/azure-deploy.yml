@@ -3,7 +3,7 @@ name: Azure Deployment (Develop)
 on:
   push:
     branches:
-      - develop  # ✅ triggers on push to develop branch
+      - develop  # Trigger on develop branch
 
 jobs:
   deploy:
@@ -22,11 +22,11 @@ jobs:
       - name: Deploy Backend to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: habit-backend-app-a09e8c13  # ✅ replace with your backend app name
+          app-name: habit-backend-app-a09e8c13
           images: idiane05/habit-backend:latest
 
       - name: Deploy Frontend to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: habit-frontend-app-a09e8c13  # ✅ replace with your frontend app name
+          app-name: habit-frontend-app-a09e8c13
           images: idiane05/habit-frontend:latest
