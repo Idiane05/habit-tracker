@@ -1,0 +1,32 @@
+name: Azure Deployment (Develop)
+
+on:
+  push:
+    branches:
+      - develop  # ✅ triggers on push to develop branch
+
+jobs:
+  deploy:
+    name: Deploy to Azure Web Apps
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy Backend to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: habit-backend-app-a09e8c13  # ✅ replace with your backend app name
+          images: idiane05/habit-backend:latest
+
+      - name: Deploy Frontend to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: habit-frontend-app-a09e8c13  # ✅ replace with your frontend app name
+          images: idiane05/habit-frontend:latest
