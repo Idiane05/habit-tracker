@@ -6,7 +6,8 @@
 ## 📸 Screenshots of Provisioned Resources
 Below are the screenshots showing successful resources
 
-<img width="958" height="440" alt="habit-azure-frontend" src="https://github.com/user-attachments/assets/5886d691-826f-4c2a-a7ce-bc041b3642cf" />
+<img width="953" height="437" alt="resources azure" src="https://github.com/user-attachments/assets/3e7bbacd-26d3-4faa-8e74-0eeba9c053e8" />
+
 
 ---
 
