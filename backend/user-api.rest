@@ -1,0 +1,23 @@
+### POST register new user
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{
+  "name": "Diane I"
+}
+
+### GET all users
+GET http://localhost:5000/api/users
+
+### POST new habit
+POST http://localhost:5000/api/habits
+Content-Type: application/json
+
+{
+  "title": "Exercise 30 mins",
+  "userId": 1
+}
+
+### GET all habits
+GET http://localhost:5000/api/habits
+
