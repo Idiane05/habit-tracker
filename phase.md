@@ -13,8 +13,8 @@ Below are the screenshots showing successful resources
 
 ##  Peer Review
 I reviewed my peer’s Pull Request here:  
-[https://github.com/peer-username/repo-name/pull/PR-number](https://github.com/peer-username/repo-name/pull/PR-number)
-
+[https://github.com/umumararungu/StuCents-app/pull/10#pullrequestreview-3053030851
+](https://github.com/umumararungu/StuCents-app/pull/10#pullrequestreview-3053030851)
 ---
 
 ##  Reflection
