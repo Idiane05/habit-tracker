@@ -56,6 +56,10 @@ jobs:
         working-directory: ./frontend
         run: npm install
 
+      - name: Show frontend package.json  # Debug step added here
+        working-directory: ./frontend
+        run: cat package.json
+
       - name: Run frontend tests
         working-directory: ./frontend
         run: npm test
@@ -73,4 +77,4 @@ jobs:
         with:
           app-name: habit-frontend-app-a09e8c13
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_FRONTEND }}
-          package: ./frontend/dist
+          package: ./frontend/build
