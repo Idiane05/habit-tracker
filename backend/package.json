@@ -8,7 +8,7 @@
     "dev": "nodemon src/index.js",
     "lint": "echo \"(Optional) Add ESLint script here\"",
     "test": "echo \"(Optional) Add test runner here\" && exit 0",
-    "build": "tsc"
+    "build": "echo \"No build step needed\""
   },
   "keywords": [],
   "author": "",
