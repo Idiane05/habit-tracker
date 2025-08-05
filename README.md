@@ -1,3 +1,3 @@
 🔗 Repository Link
 Access the project here:
- https://github.com/Idiane05/habitrackit
+ https://github.com/Idiane05/habitrack.git
